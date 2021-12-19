@@ -55,11 +55,17 @@ function renderTodoItemList(todoItems, finishedItems) {
         deleteBtn.innerText = "X";
 
         deleteBtn.addEventListener("click",(e)=>{
-            todoItems.splice(i,1)
+            todoItems.splice(i,1);
             renderTodoItemList(todoItems, finishedItems);
 
-        })
-
+        });
+        
+        titleEl.addEventListener("click",(e)=>{
+            let changeE1 = prompt("what you want to change is:","");
+            titleEl.innerText = changeE1;
+            todoItems[i]=changeE1.value;
+            console.log(i);
+        });
 
         titleEl.innerText = item.title;
 
@@ -121,7 +127,7 @@ function renderInputPane(todoItems) {
             title: inputEl.value,
             isFinished: false,
             isImportance: false, 
-        })
+        });
         
         console.log("add a item: ", inputEl.value);
         renderTodoItemList(todoItems, finishedItems);
