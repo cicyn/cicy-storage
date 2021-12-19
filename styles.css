@@ -1,0 +1,61 @@
+
+body {
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.todolist-panel {
+    width: 20em;
+    min-height: 25em;
+
+    border: 1px solid #bbb;
+    box-shadow: 2px 2px 2px #bbb;
+
+    background-color: rgb(144, 193, 212);
+
+}
+
+.input-pane {
+    display: flex;
+    background-color: rgb(245, 220, 182);
+}
+
+.input-pane, .list-pane {
+    padding: 5px 1em;
+}
+
+.input-pane > input {
+    flex: 1 1 8em;
+}
+
+.list-pane > .todo-item {
+    display: flex;
+    margin: 0.5em 0;
+    background-color: aliceblue;
+}
+
+.list-pane > .todo-item > .title {
+    flex: 1 1 8em;
+}
+
+.important-flag {
+    width: 1.5em;
+    text-align: center;
+    border: 1px solid #bbb;
+    color: #ccc;
+    font-size: 1em;
+    font-weight: 900;
+
+    user-select: none;
+}
+
+.important-flag.open {
+    color: rgb(182, 52, 52)
+}
+
+.input-pane  #his-btn.open {
+    background-color: rgb(162, 226, 182);
+}
+
