@@ -63,7 +63,7 @@ function renderTodoItemList(todoItems, finishedItems) {
         titleEl.addEventListener("click",(e)=>{
             let changeE1 = prompt("what you want to change is:","");
             titleEl.innerText = changeE1;
-            todoItems[i]=changeE1.value;
+            todoItems[i].title=changeE1.value;
             console.log(i);
         });
 
